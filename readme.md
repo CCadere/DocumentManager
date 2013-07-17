@@ -16,6 +16,7 @@ In your App/Config/bootstrap.php , load the plugin using its own bootstrap file 
 CakePlugin::load('DocumentManager', array('bootstrap' => true));
 
 Load plugin's css files and scripts in the layout you use:
+
 echo $this->fetch('css');
 echo $this->fetch('script');
 
@@ -39,6 +40,7 @@ to access any action and any file.
 
 
 *** Turning of permission management ***
+
 If you do not want user permission management, just turn it off by setting DocumentManager.authentification to false in DocumentManager/Config/bootstrap.php
 
 
