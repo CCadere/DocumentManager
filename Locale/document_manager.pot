@@ -1,0 +1,164 @@
+# LANGUAGE translation of CakePHP Application
+# Copyright YEAR NAME <EMAIL@ADDRESS>
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PROJECT VERSION\n"
+"POT-Creation-Date: 2013-07-17 15:59+0200\n"
+"PO-Revision-Date: YYYY-mm-DD HH:MM+ZZZZ\n"
+"Last-Translator: NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <EMAIL@ADDRESS>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
+
+#: Controller/DocumentsController.php:32
+msgid "Le nom d'un dossier ne peut pas commencer par un point."
+msgstr ""
+
+#: Controller/DocumentsController.php:86
+msgid "Le fichier n'a pu être supprimé."
+msgstr ""
+
+#: Controller/DocumentsController.php:88
+msgid "Ce fichier ne vous appartient pas."
+msgstr ""
+
+#: Controller/DocumentsController.php:104
+msgid "Le dossier n'a pu être supprimé."
+msgstr ""
+
+#: Controller/DocumentsController.php:106
+msgid "Ce dossier contient des fichiers qui ne vous appartiennent pas."
+msgstr ""
+
+#: Model/Document.php:24
+msgid "Fichier non trouvé."
+msgstr ""
+
+#: Model/Document.php:86;151
+#: Model/Behavior/DocumentedBehavior.php:103
+msgid "Un fichier portant ce nom existe déjà."
+msgstr ""
+
+#: Model/Document.php:98
+#: Model/Behavior/DocumentedBehavior.php:111
+msgid "Le fichier n'a pu être sauvegardé."
+msgstr ""
+
+#: Model/Document.php:112
+msgid "Le nom d'un fichier ne peut pas commencer par un point."
+msgstr ""
+
+#: Model/Document.php:120
+msgid "Les fichiers de plus de %d Mb ne peuvent être mis en ligne."
+msgstr ""
+
+#: Model/Document.php:122
+msgid "Le fichier n'a put être mis en ligne. Veuillez réessayer."
+msgstr ""
+
+#: Model/Document.php:142
+msgid "Ce fichier n'existe plus."
+msgstr ""
+
+#: Model/Document.php:166
+msgid "Le fichier n'a pu être renommé."
+msgstr ""
+
+#: Model/Document.php:226
+msgid "Veuillez fournir un nom de dossier."
+msgstr ""
+
+#: Model/Document.php:230
+msgid "Ce dossier existe déjà."
+msgstr ""
+
+#: Model/Document.php:232
+msgid "Le dossier n'a pu être créé. Veuillez vérifer le nom ou les permissions d'écriture du répertoire racine."
+msgstr ""
+
+#: Model/Behavior/DocumentedBehavior.php:139
+msgid "Le document n'a pas pu être créé."
+msgstr ""
+
+#: View/Documents/index.ctp:7
+msgid "Gestion des documents"
+msgstr ""
+
+#: View/Documents/index.ctp:11
+msgid "Dossier: "
+msgstr ""
+
+#: View/Documents/index.ctp:26
+msgid "Remonter dans l'arborescence"
+msgstr ""
+
+#: View/Documents/index.ctp:52
+msgid "Créer un nouveau dossier"
+msgstr ""
+
+#: View/Documents/index.ctp:55
+msgid "Nom du dossier"
+msgstr ""
+
+#: View/Documents/index.ctp:56
+msgid "Chosissez un nom de dossier puis appuyez sur le bouton créer."
+msgstr ""
+
+#: View/Documents/index.ctp:58
+msgid "Créer"
+msgstr ""
+
+#: View/Documents/index.ctp:73;75
+msgid "Ajouter un fichier"
+msgstr ""
+
+#: View/Documents/index.ctp:81
+msgid "Description du fichier"
+msgstr ""
+
+#: View/Documents/index.ctp:82
+msgid "Mettre en ligne"
+msgstr ""
+
+#: View/Elements/file.ctp:5
+msgid "Propriétaire %s %s"
+msgstr ""
+
+#: View/Elements/file.ctp:11
+msgid "Détails"
+msgstr ""
+
+#: View/Elements/file.ctp:13
+msgid "Copier l'URL"
+msgstr ""
+
+#: View/Elements/file.ctp:19
+msgid "Renommer"
+msgstr ""
+
+#: View/Elements/file.ctp:27
+msgid "Nouveau nom de fichier :"
+msgstr ""
+
+#: View/Elements/file.ctp:31
+#: View/Elements/folder.ctp:20
+msgid "Supprimer"
+msgstr ""
+
+#: View/Elements/file.ctp:39
+#: View/Elements/folder.ctp:28
+msgid "Etes-vous certain de vouloir supprimer cette entrée ?"
+msgstr ""
+
+#: View/Elements/file.ctp:49;51
+msgid "Image de profil"
+msgstr ""
+
+#: View/Elements/folder.ctp:12
+msgid "Ouvrir"
+msgstr ""
+

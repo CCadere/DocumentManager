@@ -1,0 +1,88 @@
+.name-row{
+	line-height:25px;
+	font-weight:bold;
+
+}
+.name-row span.owner{
+
+}
+/*
+.name-row.even .span6{
+	background:#F1F1F1;
+}
+.name-row.odd .span6{
+	background:#FFFFFF;
+}*/
+.name-index.backlink ,
+.name-index.file a.file-link,
+.name-index.folder a{
+	display:block;
+	padding:0 0 0 60px;
+	height:50px;
+	background: url(/document_manager/img/folder.png) no-repeat 0 0;
+}
+.name-index.folder a:active,
+.name-index.folder a:visited,
+.name-index.folder a:link{
+	background-position: 0 0;
+}
+.name-index.folder a:focus,
+.name-index.folder a:hover{
+	background-position: 0 -50px;
+}
+
+.name-index.file a:active,
+.name-index.file a:visited,
+.name-index.file a:link{
+	background-position: 0 -100px;
+}
+.name-index.file a:focus,
+.name-index.file a:hover{
+	background-position: 0 -150px;
+}
+
+.name-index.backlink:active,
+.name-index.backlink:visited,
+.name-index.backlink:link{
+	background-position: 0 -200px;
+}
+.name-index.backlink:focus,
+.name-index.backlink:hover{
+	background-position: 0 -250px;
+}
+
+.name-index.file .owner{
+	font-weight:normal;
+	color:#AAB6F2;
+}
+.name-index.file a:hover .owner{
+	text-decoration:none;
+	color:#184090;
+}
+.file-extra{
+	overflow:hidden;
+	display:none;
+}
+.file-comment,
+.owner-profile{
+	line-height:12px;
+	border:1px solid #D4DAF8;
+	margin: 0 9px;
+	min-height:100px;
+
+}
+.owner-profile .mailto,
+.owner-profile .user-info{
+	margin-left: 110px;
+	margin-top:5px;
+}
+.file-comment .content{
+	margin: 5px 10px;
+	font-weight: normal;
+
+}
+.folder-actions,
+.file-actions{
+	padding-top:10px;
+	font-weight:normal;
+}
