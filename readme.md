@@ -1,7 +1,7 @@
 CakePHP 2.X Document Manager Plugin
 ==============================
 
-This plugin offers the the possibility to have an online browser that allows to manage a file arborescence in a directory tree.
+This plugin offers the the possibility to have an online browser that allows to manage files inside a directory tree.
 You can upload, rename, delete files, create folders, get the absolute URL of a file and much more...
 
 

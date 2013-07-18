@@ -7,6 +7,12 @@
  * Settings, when attaching this behavior to a model, are the list of fields to be documented.
  * For each (virtual) documented field <name>, model table must contain a <name>_id column.
  * 
+ * Example of use :
+ * public $actsAs = array(
+ *		'DocumentManager.Documented' => array(
+ *			'datasheet',
+ *	));
+ * 
  * When creating or editing a model, a Document will be created or updated for each virtual URL field present in data.
  * If a virtual field is present but empty, the old Document (if any) will be deleted.
  * 
