@@ -44,8 +44,7 @@ function ajaxViewExtra() {
  * @details Binds to a click event on delete links, loads a yes/no dialog to first wrapper div. On yes, calls delete action on server and removes deleted DOM element.
  */
 function ajaxDelete() {
-	// $('.wrapper .ajax-delete').off('click');
-	$('vody').on('click', '.wrapper .ajax-rename', function(event) {
+	$('body').on('click', '.wrapper .ajax-delete', function(event) {
 		event.preventDefault();
 
 		if($(this).hasClass('confirm')){
@@ -69,7 +68,6 @@ function ajaxDelete() {
  * @details Binds to a click event on rename links, prompts user for new file name. On valid name, calls rename action on server and replaces selected DOM element.
  */
 function ajaxRename() {
-	// $('.wrapper .ajax-rename').off('click');
 	$('body').on('click', '.wrapper .ajax-rename', function(event) {
 		event.preventDefault();
 		renameFunction($(this));
@@ -84,8 +82,6 @@ function deleteFunction(element) {
 
 	targetDiv.append(loader);
 	$.get(url, function(data) {
-		/*console.log(data);*/
-
 		if (data.json.error) {
 			alert(data.json.error);
 			targetDiv.find('.loader').remove();
