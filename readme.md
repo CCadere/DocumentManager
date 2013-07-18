@@ -24,6 +24,7 @@ echo $this->fetch('script');
 *** Dependencies ***
 
 This plugin uses the following scripts: jquery, jquery-ui. http://jquery.com/ , http://jqueryui.com/
+
 For display purposes this plugins uses the following graphic library: Bootstrap. http://twitter.github.io/bootstrap/
 
 For users permissions this plugin is meant to be used with the Authake plugin : https://github.com/mtkocak/authake
@@ -36,7 +37,7 @@ If you have another users management system, change the $belongsTo in Document.p
 in DocumentManager/Controller/DocumentManagerAppController.php and DocumentManager/View/Helper/DocumentManagerHelper.php to retrieve the right information.
 
 Using this plugin without Authake and without modifying these two functions will only work if you disable permission management to allow any user
-to access any action and any file.
+to access any action and any file as explained below.
 
 
 *** Turning of permission management ***
