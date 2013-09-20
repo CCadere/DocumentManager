@@ -26,6 +26,7 @@ Once the plugin is loaded, its base URL is : /document_manager/documents
 *** Dependencies ***
 
 This plugin uses jQuery : http://jquery.com/
+
 Be sure to load jQuery before including the scripts of this plugin. Otherwise while the plugin will still work, AJAX calls won't be possible.
 
 For a better display install Bootstrap. http://twitter.github.io/bootstrap/
