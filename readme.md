@@ -20,6 +20,8 @@ Load plugin's css files and scripts in the layout you use:
 echo $this->fetch('css');
 echo $this->fetch('script');
 
+Once the plugin is loaded, its base URL is : /document_manager/documents
+
 
 *** Dependencies ***
 
