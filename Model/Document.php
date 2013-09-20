@@ -9,12 +9,18 @@
  */
 class Document extends DocumentManagerAppModel {
 
-	public $belongsTo = array(
-		'User' => array(
-			'className' => 'Authake.User',
-			'foreignKey' => 'user_id',
-		),
-	);
+	public function __construct($id = false, $table = null, $ds = null) {
+		if(Configure::read('DocumentManager.authentification')) {// If there is an authentification system, bind Documents to the right User model
+			$this->belongsTo = array(
+				'User' => array(
+					'className' => 'Authake.User',
+					'foreignKey' => 'user_id',
+				),
+			);
+		}
+		parent::__construct($id, $table, $ds);
+	}
+
 
 	public function beforeValidate() {
 		$this->validate = array(
@@ -65,7 +71,7 @@ class Document extends DocumentManagerAppModel {
 				$files[$i] = array(
 					'name' => $file,
 					'Document' => empty($document) ? null : $document['Document'],
-					'User' => empty($document) ? null : $document['User'],
+					'User' => (empty($document) || empty($document['User'])) ? null : $document['User'],
 				);
 			}
 		}

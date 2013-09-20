@@ -23,9 +23,10 @@ echo $this->fetch('script');
 
 *** Dependencies ***
 
-This plugin uses the following scripts: jquery, jquery-ui. http://jquery.com/ , http://jqueryui.com/
+This plugin uses jQuery : http://jquery.com/
+Be sure to load jQuery before including the scripts of this plugin. Otherwise while the plugin will still work, AJAX calls won't be possible.
 
-For display purposes this plugins uses the following graphic library: Bootstrap. http://twitter.github.io/bootstrap/
+For a better display install Bootstrap. http://twitter.github.io/bootstrap/
 
 For users permissions this plugin is meant to be used with the Authake plugin : https://github.com/mtkocak/authake
 Authake.User should declare it hasMany DocumentManager.Document.
@@ -33,8 +34,8 @@ Authake.User should declare it hasMany DocumentManager.Document.
 - Users should have fields id, email, first_name and last_name.
 - Users can have field picture (displayed with Documents).
 
-If you have another users management system, change the $belongsTo in Document.php according to your User class, and change the functions getUserId() and isAdmin() 
-in DocumentManager/Controller/DocumentManagerAppController.php and DocumentManager/View/Helper/DocumentManagerHelper.php to retrieve the right information.
+If you have another users management system, change the $belongsTo in Document.php, __construct() function, according to your User class, and change the functions 
+getUserId() and isAdmin() in DocumentManager/Controller/DocumentManagerAppController.php and DocumentManager/View/Helper/DocumentManagerHelper.php to retrieve the right information.
 
 Using this plugin without Authake and without modifying these two functions will only work if you disable permission management to allow any user
 to access any action and any file as explained below.
