@@ -18,11 +18,7 @@ class Document extends DocumentManagerAppModel {
 				),
 			);
 		}
-		parent::__construct($id, $table, $ds);
-	}
-
-
-	public function beforeValidate() {
+		
 		$this->validate = array(
 			'url' => array(
 				'locationExists' => array(
@@ -32,8 +28,8 @@ class Document extends DocumentManagerAppModel {
 				),
 			),
 		);
-
-		return true;
+		
+		parent::__construct($id, $table, $ds);
 	}
 
 	public function beforeDelete() {
