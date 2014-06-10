@@ -6,7 +6,6 @@
 
 class DocumentManagerAppController extends AppController {
 	public $helpers = array('DocumentManager.DocumentManager');
-	public $components = array('DocumentManager.Documents');
 	
 	/**
 	 * Checks if the current User has Admin rights or not 
