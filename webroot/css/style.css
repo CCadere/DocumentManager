@@ -19,7 +19,7 @@
 	display:block;
 	padding:0 0 0 60px;
 	height:50px;
-	background: url(/document_manager/img/folder.png) no-repeat 0 0;
+	background: url(../img/folder.png) no-repeat 0 0;
 }
 .name-index.folder a:active,
 .name-index.folder a:visited,
