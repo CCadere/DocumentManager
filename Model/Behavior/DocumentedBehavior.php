@@ -138,6 +138,7 @@ class DocumentedBehavior extends ModelBehavior {
 				$Document->create();
 				if ($Document->save(array(
 							'url' => $Model->data[$Model->alias][$field],
+							'user_id' => $Model->data[$Model->alias]['user_id'],
 						))) { // Document successfully created
 					// Remember newly created Document
 					$created[$field] = $Document->getInsertID();

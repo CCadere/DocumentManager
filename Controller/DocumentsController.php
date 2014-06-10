@@ -32,7 +32,7 @@ class DocumentsController extends DocumentManagerAppController {
 			$this->Session->setFlash(__d("document_manager", "Le nom d'un dossier ne peut pas commencer par un point."));
 		} else {
 			if ($error = $this->Document->createSubFolder($this->passedArgs, $this->request->data('folderName'))) {
-				$this->Session->setFlash($error, 'flash', array('class' => 'alert alert-error'));
+				$this->Session->setFlash($error, 'flash', array('class' => 'alert alert-danger'));
 			}
 		}
 		$this->redirect(array_merge($this->passedArgs, array('action' => 'index')));
@@ -42,9 +42,14 @@ class DocumentsController extends DocumentManagerAppController {
 	 * Uploads a file to the current folder of the mini explorer
 	 */
 	public function upload_file() {
-		$message = $this->Document->saveDocument($this->request->data, $this->passedArgs, $this->getUserId(), getallheaders());
+		if (!function_exists('getallheaders')) {
+			$headers = $this->getHeaders();
+		} else {
+			$headers = getallheaders();
+		}
+		$message = $this->Document->saveDocument($this->request->data, $this->passedArgs, $this->getUserId(), $headers);
 		if (!empty($message)) {
-			$this->Session->setFlash($message, 'flash', array('class' => 'alert alert-error'));
+			$this->Session->setFlash($message, 'flash', array('class' => 'alert alert-danger'));
 		}
 		$this->redirect(array_merge($this->passedArgs, array('action' => 'index')));
 	}
@@ -70,7 +75,7 @@ class DocumentsController extends DocumentManagerAppController {
 		} else { // Success
 			// Display file element
 			$this->set(compact('pathFolderNames', 'file'));
-		}		
+		}
 	}
 
 	/**
@@ -87,7 +92,7 @@ class DocumentsController extends DocumentManagerAppController {
 		} else {
 			$error = __d("document_manager", "Ce fichier ne vous appartient pas.");
 		}
-	
+
 		$json = array('remove' => true, 'error' => $error);
 		$this->set(compact('json'));
 		$this->set('_serialize', array('json'));
@@ -98,7 +103,7 @@ class DocumentsController extends DocumentManagerAppController {
 	 */
 	public function delete_folder() {
 		$this->viewClass = 'Json';
-		
+
 		$path = $this->Document->getFullPath($this->Document->getPathFolderNames($this->passedArgs), $this->passedArgs['folder']);
 		if ($this->hasAdminRights() || $this->folderBelongsToUser($path)) {
 			$error = $this->Document->deleteFolder($path) ? null : __d("document_manager", "Le dossier n'a pu être supprimé.");
@@ -110,5 +115,19 @@ class DocumentsController extends DocumentManagerAppController {
 		$this->set(compact('json'));
 		$this->set('_serialize', array('json'));
 	}
+
+	/**
+	 * Custom function in case apache is not deployed
+	 * @return type
+	 */
+	public function getHeaders() { 
+       $headers = ''; 
+       foreach ($_SERVER as $name => $value) { 
+           if (substr($name, 0, 5) == 'HTTP_') { 
+               $headers[str_replace(' ', '-', ucwords(strtolower(str_replace('_', ' ', substr($name, 5)))))] = $value; 
+           } 
+       } 
+       return $headers; 
+    } 
 
 }
