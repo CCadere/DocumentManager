@@ -52,7 +52,7 @@
 				<legend><?php echo __d("document_manager", "Créer un nouveau dossier"); ?></legend>
 				<?php echo $this->Form->input('folderName', array(
 					'div'=>'input text',
-					'label' => array( 'text' => __d("document_manager", "Nom du dossier"), 'class' => 'control-label'),
+					'label' => __d("document_manager", "Nom du dossier"),
 					'title' => __d("document_manager", "Chosissez un nom de dossier puis appuyez sur le bouton créer."),
 					)); ?>
 				<?php echo $this->Form->submit(__d("document_manager", "Créer"), array('div' => false, 'class' => 'btn')); ?>
@@ -78,7 +78,7 @@
 						<?php echo $this->Form->file('file'); ?>
 					</div>
 				</div>
-				<?php echo $this->Form->input('comments', array('type' => 'textarea', 'label' => array( 'text' => __d("document_manager", "Description du fichier"), 'class' => 'control-label'))); ?>
+				<?php echo $this->Form->input('comments', array('type' => 'textarea', 'label' => __d("document_manager", "Description du fichier"))); ?>
 				<?php echo $this->Form->submit(__d("document_manager", "Mettre en ligne"), array('div' => false, 'class' => 'btn')); ?>
 				<div class="clear"></div>
 			</fieldset>
