@@ -5,16 +5,16 @@ class DocumentManagerAppModel extends AppModel {
 	 * @brief returns the absolute path to the file of given URL (absolute or relative)
 	 */
 	public function urlToFile($url) {
-		$url = explode('/files/', $url);
-		return APP . WEBROOT_DIR . DS . 'files' . DS . implode(DS, explode('/', $url[1]));
+		$url = explode('/' . Configure::read('DocumentManager.baseDir') . '/', $url);
+		return APP . WEBROOT_DIR . DS . Configure::read('DocumentManager.baseDir') . DS . implode(DS, explode('/', $url[1]));
 	}
 	
 	/**
 	 * @brief returns the relative URL of the file described by given absolute path
 	 */
 	public function fileToUrl($path) {
-		$path = explode(DS . 'files' . DS, $path);
-		return '/files/' . implode('/', explode(DS, $path[1]));
+		$path = explode(DS . Configure::read('DocumentManager.baseDir') . DS, $path);
+		return '/' . Configure::read('DocumentManager.baseDir') . '/' . implode('/', explode(DS, $path[1]));
 	}
 	
 	/**
